@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
 
 const StyledButton = (props) => {
@@ -14,12 +14,12 @@ const StyledButton = (props) => {
 
   return (
     <View style={styles.container}>
-      <Pressable
+      <TouchableOpacity
         style={[styles.button, { backgroundColor: backgroundColor }]}
         onPress={() => onPress()}
       >
         <Text style={[styles.text, { color: textColor }]}> {content} </Text>
-      </Pressable>
+      </TouchableOpacity>
     </View>
   );
 };
